@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 33% 97%;
+    --foreground: 215 50% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 12%;
+
+    --primary: 215 90% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 215 50% 12%;
+
+    --muted: 210 25% 95%;
+    --muted-foreground: 215 15% 48%;
+
+    --accent: 175 65% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 205 85% 55%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 214 25% 90%;
+    --input: 214 25% 90%;
+    --ring: 215 90% 32%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 215 55% 15%;
+    --sidebar-foreground: 210 30% 88%;
+    --sidebar-primary: 210 100% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 50% 22%;
+    --sidebar-accent-foreground: 210 30% 92%;
+    --sidebar-border: 215 45% 22%;
+    --sidebar-ring: 210 100% 70%;
+    --sidebar-muted: 215 40% 35%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(215, 90%, 32%), hsl(215, 85%, 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(175, 65%, 40%), hsl(175, 55%, 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(215, 55%, 12%), hsl(215, 70%, 25%), hsl(215, 90%, 32%));
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(210, 33%, 98%));
+
+    --shadow-sm: 0 1px 3px hsl(215 50% 12% / 0.06);
+    --shadow-md: 0 4px 12px hsl(215 50% 12% / 0.08);
+    --shadow-lg: 0 8px 30px hsl(215 50% 12% / 0.1);
+    --shadow-glow: 0 0 20px hsl(215 90% 32% / 0.15);
+
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  .dark {
+    --background: 215 55% 8%;
+    --foreground: 210 30% 92%;
+    --card: 215 50% 12%;
+    --card-foreground: 210 30% 92%;
+    --popover: 215 50% 12%;
+    --popover-foreground: 210 30% 92%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 215 55% 8%;
+    --secondary: 215 40% 18%;
+    --secondary-foreground: 210 30% 92%;
+    --muted: 215 35% 16%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 175 55% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 50% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 85% 55%;
+    --warning-foreground: 0 0% 100%;
+    --info: 205 80% 60%;
+    --info-foreground: 0 0% 100%;
+    --border: 215 35% 20%;
+    --input: 215 35% 20%;
+    --ring: 210 100% 65%;
+    --sidebar-background: 215 60% 6%;
+    --sidebar-foreground: 210 30% 85%;
+    --sidebar-primary: 210 100% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 50% 14%;
+    --sidebar-accent-foreground: 210 30% 90%;
+    --sidebar-border: 215 45% 14%;
+    --sidebar-ring: 210 100% 65%;
+    --sidebar-muted: 215 40% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-md);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-lg);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
